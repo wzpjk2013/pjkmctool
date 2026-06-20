@@ -2,5 +2,6 @@
   "pjkmctool.mod_options.title": "Pjk Tool 设置",
   "pjkmctool.pause.menu_button": "Pjk Tool",
   "pjkmctool.option.toggle_sprint": "保持疾跑: %s",
-  "pjkmctool.option.edge_sneak": "方块边缘自动潜行: %s"
+  "pjkmctool.option.edge_sneak": "方块边缘自动潜行: %s",
+  "pjkmctool.status.message": "§a[Pjk Tool]§r 保持疾跑: %s | 边缘潜行: %s"
 }
