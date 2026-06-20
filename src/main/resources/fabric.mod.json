@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pjkmctool",
+  "version": "${version}",
+  "name": "pjkmctool",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/pjkmctool/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.pjkmctool.client.PjkmctoolDataGenerator"
+    ],
+    "client": [
+      "org.pjkmctool.client.PjkmctoolClient"
+    ],
+    "main": [
+      "org.pjkmctool.Pjkmctool"
+    ]
+  },
+  "mixins": [
+    "pjkmctool.mixins.json",
+    {
+      "config": "pjkmctool.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
