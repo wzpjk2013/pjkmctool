@@ -53,8 +53,9 @@ public class ModOptionsScreen extends Screen {
         // 返回按钮
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("gui.done"), button -> {
             ModConfig.saveConfig();
-            assert this.client != null;
-            this.client.setScreen(parent);
+            if (this.client != null) {
+                this.client.setScreen(parent);
+            }
         }).dimensions(this.width / 2 - buttonWidth / 2, startY + spacing * 3, buttonWidth, buttonHeight).build());
     }
 
@@ -89,7 +90,8 @@ public class ModOptionsScreen extends Screen {
     @Override
     public void close() {
         ModConfig.saveConfig();
-        assert this.client != null;
-        this.client.setScreen(parent);
+        if (this.client != null) {
+            this.client.setScreen(parent);
+        }
     }
 }
